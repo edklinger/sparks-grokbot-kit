@@ -1,0 +1,24 @@
+{
+  "run": null,
+  "owner": {
+    "name": "",
+    "emails": [],
+    "phones": []
+  },
+  "watermarks": {
+    "gmail": null,
+    "calendar": null,
+    "meeting_notes": null,
+    "slack": null,
+    "whatsapp": null,
+    "linkedin_archive": null,
+    "linkedin_browser": null,
+    "crm": null,
+    "docs": null,
+    "contacts": null,
+    "personal_mbox": null,
+    "imessage": null
+  },
+  "blockers": {},
+  "candidate_merges": []
+}

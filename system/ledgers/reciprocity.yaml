@@ -1,0 +1,6 @@
+# APPEND-ONLY. Favours given and received, used to judge connector health.
+# - date: YYYY-MM-DD
+#   with: Full Name
+#   dir: gave | received
+#   what: plain English
+[]

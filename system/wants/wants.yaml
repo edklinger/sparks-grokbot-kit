@@ -1,0 +1,10 @@
+# Derived. Rebuilt every run from the corpus. Do not hand-edit.
+# - id: W-xxxxxxxx
+#   person: slug
+#   kind: want | have | passion
+#   text: plain English
+#   quote: "verbatim, if any"
+#   source: gmail | whatsapp | ...
+#   date: YYYY-MM-DD
+#   state: fresh | decaying | expiring-soon
+[]

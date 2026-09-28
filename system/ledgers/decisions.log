@@ -1,0 +1,2 @@
+# APPEND-ONLY. One line per decision on a suggested action.
+# YYYY-MM-DD<TAB>move_id<TAB>done|later|no<TAB>optional note

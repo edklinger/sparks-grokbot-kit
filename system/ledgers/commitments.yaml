@@ -1,0 +1,10 @@
+# APPEND-ONLY. One entry per promise, in either direction.
+# - id: PR-xxxxxxxx
+#   date: YYYY-MM-DD
+#   dir: owner_owes | owed_to_owner | mutual
+#   who: Full Name
+#   what: plain English
+#   weight: 1-5
+#   source: channel and reference
+#   closed: YYYY-MM-DD   # add when settled; never delete the entry
+[]

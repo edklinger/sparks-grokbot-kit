@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Sparks corpus event",
+  "description": "One extracted signal. Stored one per line in system/raw/<run>/*.jsonl. IDs are deterministic: kind prefix + sha1(person|normalised text)[:8].",
+  "type": "object",
+  "required": ["id", "source", "date", "person", "kind", "text", "provenance"],
+  "properties": {
+    "id": {"type": "string", "examples": ["W-c80c799f"]},
+    "source": {"type": "string", "examples": ["gmail", "calendar", "meeting_notes", "whatsapp", "linkedin", "slack", "crm", "docs", "mbox", "web"]},
+    "date": {"type": "string", "format": "date"},
+    "person": {"type": "string", "description": "Canonical person slug or full name, after identity resolution"},
+    "handles": {"type": "array", "items": {"type": "string"}, "description": "Emails, phones or profile URLs seen on this event"},
+    "kind": {"enum": ["want", "have", "passion", "promise", "ask_unanswered", "intro", "vouched", "decision", "fact", "life", "thanks"]},
+    "direction": {"enum": ["owner_owes", "owed_to_owner", "mutual", null], "description": "Promises only"},
+    "text": {"type": "string", "description": "Plain-English statement of the signal"},
+    "quote": {"type": ["string", "null"], "description": "Verbatim words, if any"},
+    "provenance": {"enum": ["RECORD", "INFERENCE", "MEASURED", "WEB"]},
+    "ref": {"type": ["string", "null"], "description": "Where to find it: thread subject, chat name, meeting title, URL"},
+    "fresh": {"type": "boolean"},
+    "_personal": {"type": "boolean"}
+  }
+}

@@ -1,0 +1,8 @@
+# APPEND-ONLY. Every introduction made, received or proposed.
+# - date: YYYY-MM-DD
+#   a: Full Name
+#   b: Full Name
+#   by: owner | Full Name
+#   status: proposed | opted-in | made | declined | outcome
+#   outcome: plain English
+[]
