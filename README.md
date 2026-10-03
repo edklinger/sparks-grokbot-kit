@@ -8,7 +8,7 @@ This kit contains no personal data. The demo is built on a fictional network ("A
 
 ```
 SUPER_PROMPT.md          the bot's instructions (paste into the main bot)
-system/                  blank file-system-of-record templates (README contract, RULES, EXCLUDE, ledgers, state)
+system/                  blank file-system-of-record templates (README contract, RULES, optional EXCLUDE, ledgers, state)
 schema/                  event schema, person-file template, DATA_CONTRACT.md for the dashboard
 scripts/                 ingest parsers (WhatsApp, LinkedIn archive, mbox, calendar), coverage report,
                          dashboard validator and builder, PII scanner, demo-data generator
@@ -25,7 +25,7 @@ seed/                    the fictional dataset behind the demo
 2. **Paste** `SUPER_PROMPT.md` (everything below its divider line) into the bot's instructions.
 3. **Let the bot install the kit.** Nothing to upload. On its first run the bot downloads the latest release zip itself from `https://github.com/edklinger/sparks-grokbot-kit/releases/latest/download/sparks-grokbot-kit.zip` and unzips it into `~/sparks/`. The bot works from `~/sparks/system/` as its system of record and runs the scripts from `~/sparks/scripts/` in its terminal (Python 3, standard library only). **Fallback:** if the download fails (for example no network access), download `sparks-grokbot-kit.zip` from the [latest release](https://github.com/edklinger/sparks-grokbot-kit/releases/latest), drop it into the chat, and ask the bot to unzip it into `~/sparks/`.
 4. **Connect plugins:** Gmail and Google Calendar at minimum, then Slack and a meeting-notes tool if you use them. Plugins are shared across bots on the account.
-5. **Say "Set me up".** The bot walks you through each source one at a time (why it needs it and exactly how to grant access), asks what to exclude before reading anything, interviews you briefly, then runs the first ingest (this can take hours; WhatsApp and LinkedIn often run overnight) with progress updates, shows the coverage report, builds your dashboard and gives you a short tour of it.
+5. **Say "Set me up".** The bot walks you through each source one at a time (why it needs it and exactly how to grant access), interviews you briefly, then reads everything you have connected, with no exclusion questions. The first ingest can take hours (WhatsApp and LinkedIn often run overnight), with progress updates. It then shows the coverage report, builds your dashboard and gives you a short tour of it.
 6. **Schedule it (optional).** The bot offers a weekly "Refresh sparks" routine (for example Monday at 06:30) and a daily calendar brief. Both stay off unless you say yes. You can also say "Refresh sparks" any time.
 
 Check it worked: ask the bot to run `python3 ~/sparks/scripts/build_dashboard.py ~/sparks/dashboard/template.html ~/sparks/seed/dashboard-data.demo.json ~/sparks/demo.html`, then open the result. It should match `dashboard/demo.html`.

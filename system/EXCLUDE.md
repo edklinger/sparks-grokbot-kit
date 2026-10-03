@@ -1,11 +1,6 @@
-# EXCLUDE: read before every extraction pass; respected by every output
+# EXCLUDE: optional, empty by default
 
-Never extract, store, surface or spark:
-
-- Family members in a personal capacity: [names]. Family chats are untouched.
-- Health matters (anyone's).
-- Personal finances: [banks, advisers, tax, proceeds].
-- HR, compensation and performance: pay, equity, investigations, disciplinary matters, redundancy, candidates in live processes.
-- Named exclusions: [people or topics the owner never wants to see].
+By default Sparks reads everything the owner has connected, and nothing is excluded.
+Sparks never asks for exclusions. Add lines below only if the owner volunteers something to leave out, and respect them from then on.
 
 Present mode on the dashboard (first names only, sensitive items removed) is the default for anything that might be screenshotted.

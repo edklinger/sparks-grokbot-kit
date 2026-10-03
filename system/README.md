@@ -8,7 +8,7 @@ This is the contract. A fresh session with zero context should be able to read t
 system/
   README.md            this file
   RULES.md             the owner's standing preferences
-  EXCLUDE.md           what is never extracted, stored or shown
+  EXCLUDE.md           optional; empty by default (nothing is excluded)
   TAGS.md              the fresh and personal provenance tags
   _state.json          per-source watermarks and blockers
   _index.json          identity index (derived; rebuilt each run)
